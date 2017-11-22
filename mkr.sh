@@ -6,7 +6,7 @@
 USER=$1 #user name
 REPO=$2 #repository name
 
-# Validating user arguments
+#Validating user arguments
   if [ ! $2 ]; then
     echo "Repository name is missing "
   	exit
@@ -14,5 +14,3 @@ REPO=$2 #repository name
 
 #exec
 curl -u "${USER}" https://api.github.com/user/repos -d '{"name":"'${REPO}'"}'
-
-#testando
